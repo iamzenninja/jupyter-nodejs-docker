@@ -7,8 +7,9 @@ Credit to **notablemind** [jupyter-nodejs](https://github.com/notablemind/jupyte
 
 ## How to run it
 ```bash
+docker pull hkarhani/jupyter-nodejs
 mkdir notebooks
-docker run -v $(pwd)/notebooks:/notebook -p 8888:8888 jupyter-nodejs
+docker run --name jnodebook -d -v $(pwd)/notebooks:/notebook -p 8888:8888 hkarhani/jupyter-nodejs
 ```
 
 Jupyter will run in notebooks folder under your current directory. Then just visit http://localhost.8888
